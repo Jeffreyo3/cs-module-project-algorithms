@@ -2,10 +2,26 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+# TO-DO O(n)
 def product_of_all_other_numbers(arr):
-    # Your code here
+    if len(arr) < 2:
+        return None
 
-    pass
+    except_index = [None] * len(arr)
+
+    # for each int, find product of all the integers
+    # store total product so far each time
+    
+    for i in range(len(arr)):
+        current = 1
+        for j in range(len(arr)):
+            print(i, j)
+            if j != i:
+                current *= arr[j]
+
+        except_index[i] = current
+
+    return except_index
 
 
 if __name__ == '__main__':
