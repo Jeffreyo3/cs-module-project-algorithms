@@ -5,7 +5,8 @@ Returns: a List of integers
 
 # TO-DO re-factor for max_large test
 def sliding_window_max(nums, k):
-    maxValues = []
+    # define list to hold values
+    maxValues = [0] * (len(nums) -k +1)
     for i in range(len(nums)-(k-1)):
         # print(f"INDEX {i}")
         current = nums[i]
@@ -13,7 +14,8 @@ def sliding_window_max(nums, k):
             # print(f"num {nums[j]}")
             if nums[j] > current:
                 current = nums[j]
-        maxValues.append(current)
+        # maxValues.append(current)
+        maxValues[i] = current
     return maxValues
 
 

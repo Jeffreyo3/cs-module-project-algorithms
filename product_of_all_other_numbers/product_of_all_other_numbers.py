@@ -15,7 +15,7 @@ def product_of_all_other_numbers(arr):
     for i in range(len(arr)):
         current = 1
         for j in range(len(arr)):
-            print(i, j)
+            # print(i, j)
             if j != i:
                 current *= arr[j]
 
