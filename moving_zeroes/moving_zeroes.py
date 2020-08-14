@@ -3,9 +3,14 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def moving_zeroes(arr):
-    # Your code here
+    zeroRight = []
+    for i, value in enumerate(arr):
+        if value == 0:
+            zeroRight.append(0)
+        else:
+            zeroRight.insert(0, value)
 
-    pass
+    return zeroRight
 
 
 if __name__ == '__main__':
@@ -13,3 +18,4 @@ if __name__ == '__main__':
     arr = [0, 3, 1, 0, -2]
 
     print(f"The resulting of moving_zeroes is: {moving_zeroes(arr)}")
+
