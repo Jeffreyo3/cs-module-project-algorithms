@@ -2,6 +2,8 @@
 Input: a List of integers as well as an integer `k` representing the size of the sliding window
 Returns: a List of integers
 '''
+
+# TO-DO re-factor for max_large test
 def sliding_window_max(nums, k):
     maxValues = []
     for i in range(len(nums)-(k-1)):
